@@ -1,7 +1,7 @@
 # COMP2110/6110 - FlowTow Web Application
 
 Student Name: Zhixu Ding
-Student Number: 44463529
+Student Number: xxxxxxxx
 
 Functionality achieved is describes below, under the level listed in the assignment specifications.
 
