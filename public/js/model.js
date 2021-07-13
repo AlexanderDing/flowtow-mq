@@ -6,7 +6,7 @@ import {Auth} from'./service.js'
  * < short description: This module implements accessory functions for the application in terms of efficiency and simplicity. It offers useful functions which can be called in other modules so that the code won't have to be repeated over and over again.>
  *
  * Student Name: Zhixu Ding
- * Student Number: 44463529
+ * Student Number: xxxxxxxx
  *
  */
 
