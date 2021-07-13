@@ -4,7 +4,7 @@
  * < short description: This module implements main entry point for the whole web application. It's doing all the calling to satisfy the needs of the application.>
  *
  * Student Name: Zhixu Ding
- * Student Number: 44463529
+ * Student Number: xxxxxxxx
  *
  */
 import * as views from './views.js'
