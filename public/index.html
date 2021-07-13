@@ -1,0 +1,189 @@
+<!--
+  Student Name: Zhixu Ding
+  Student Number: 44463529
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FlowTow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="./js/main.js" type=module defer></script>
+  </head>
+  <body>
+
+    <header>
+      <div id="logo"></div>
+      <nav>
+          <ul>
+              <li><a href="#!/home">Home</a></li>
+              <li><a href="#!/all-posts">All Posts</a></li>
+              <li><a href="#!/my-posts">My Posts</a></li>
+              <li><a href="#whatis">About</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div id="content">
+
+      <div id="heading">
+
+      <div id="login"></div>
+          
+          <hgroup>
+              <h1>Welcome to FlowTow!</h1>
+          </hgroup>
+      <div id="my-posts"></div>
+
+        <div id="post">
+        <div class="threeposts">       
+          <div class="flowtow"></div>
+          <div class="flowtow"></div>
+          <div class="flowtow"></div>
+        </div>
+        
+      
+          <div id="target">
+          </div>
+
+          
+
+          <div class="postsdisplay">
+            <div class = "flex-child recent">
+              <h2 style="text-align:center">Recent Posts</h2>
+            <div class="recentposts"></div>
+          </div>
+
+          <div class="flex-child popular">
+              <h2 style="text-align:center">Popular Posts</h2>
+            <div class="popularposts"></div>
+          </div>
+
+        </div>
+          
+        </div>
+
+
+
+            <div id="comment-section"></div>
+            <div id="comment-form"></div>
+ 
+          <div id = "whatis">
+            <h2>What is FlowTow?</h2>
+            <p>FlowTow is a new, exciting, photo sharing service like nothing you've seen before!</p>
+            <p>FlowTow will support logging in users, posting images, making comments and viewing images in various ways.</p>
+          </div>
+
+      </div>
+    </div>
+
+  <footer>
+
+    <div id="social">
+      <ul>
+        <li id="social-twitter"><a href="#">Twitter</a></li>
+        <li id="social-facebook"><a href="#">Facebook</a></li>
+        <li id="social-instagram"><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <ul class="footer-tos">
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+    
+    <p id="copyright">All content and images subject to copyright &copy; COMP2110/6110 FlowTow 2021.</p>
+  </footer>
+
+  <script>  
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }; 
+  </script>
+
+  <!-- Templates -->
+
+  <script id="sample-list-template" type="text/x-handlebars-template">
+    <ul>
+      {{#each sample}}
+      <li><a href="#!/posts/{{id}}"><img class=post-name data-id={{id}} src="{{p_image.url}}" alt="{{p_caption}}"></a></li>
+      <li>{{p_caption}} by {{p_author.username}} with {{p_likes}} likes</li>
+      <li><button type='button' class="like-button" data-id={{id}}>Like</button></li>
+      {{/each}}
+    </ul>
+  </script>
+
+<script id="display-list-template" type="text/x-handlebars-template">
+    <ul>
+      {{#each display}}
+      <li> <a href="#!/posts/{{id}}"><img class=post-name data-id={{id}} src="{{p_image.url}}" alt="{{p_caption}}"></a> {{p_caption}} by {{p_author.username}} {{published_at}} No. of likes: {{p_likes}} <button type='button' class="like-button" data-id={{id}}>Like</button></li>
+      {{/each}}
+    </ul>
+</script>
+
+<script id="my-posts-template" type="text/x-handlebars-template">
+  <ul>
+    {{#each display}}
+    <li> <a href="#!/posts/{{id}}"><img class=post-name data-id={{id}} src="{{p_image.url}}" alt="{{p_caption}}"></a></li>
+      <li>{{p_caption}} by {{p_author.username}} {{published_at}} No. of likes: {{p_likes}} <button type='button' class="like-button" data-id={{id}}>Like</button> <button type='button' id="delete-button" data-id={{id}}>Delete</button></li>
+    {{/each}}
+  </ul>
+</script>
+
+
+<script id="post-template" type="text/x-handlebars-template">
+  <ul>
+    <li><img src="{{p_image.url}}" alt="{{p_caption}}"></li>
+    <li>{{p_caption}}</li>
+    <li>Author: {{p_author.username}} Post date: {{published_at}} Likes: {{p_likes}} <button type='button' class="like-button" data-id={{id}}>Like</button></li>
+  </ul>
+</script>
+
+<script id="login-template" type="text/x-handlebars-template">
+  {{#if user}}
+  <div id="login-replace"><p>Logged in as {{user.username}} <button type='button' id="logout-button">Logout</button></p><div> 
+  {{else}}
+  <form id="loginform">
+    Username: <input name=username>
+    Password: <input name=password type="password" autocomplete="on">
+    <button type=submit id="login-button">Login</button>
+  </form>
+  <div id="error"></div>
+    {{/if}}
+</script>
+
+<script id="postform-template" type="text/x-handlebars-template">
+  <form id="postform">
+      <label for=p_url> Image: </label>
+      <input name=p_url type=file accept=image/*>
+      <label for=p_caption> Caption: </label>
+      <input name=p_caption>
+      <button type=submit id="post-button">Create a Post</button>
+  </form>
+</script>
+
+<script id="comment-template" type="text/x-handlebars-template">
+  <ul>
+    <li> Comments: </li>
+    {{#each comment}}
+    <li> -- {{c_content}}</li>
+    {{/each}}
+  </ul>
+</script>
+
+<script id="commentform-template" type="text/x-handlebars-template">
+  <form id="commentform">
+      <label for=c_content> Enter your comment: {{c_post}}</label>
+      <input name=c_content>
+      <button type=submit id="comment-button">Add a Comment</button>
+  </form>
+</script>
+
+  </body>
+</html>

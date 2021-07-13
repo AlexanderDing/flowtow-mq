@@ -1,0 +1,368 @@
+/* please add your own style */
+
+/* sample spreadshet - you should replace all of this! */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #a8c66c;
+  font-family: Arial;
+}
+
+header {
+  width: 90%;
+  height: 40px;
+  margin: 20px auto;
+  background-color: #1b6535;
+  padding-right: 2px;
+}
+header nav {
+  width: 70%;
+  height: 40px;
+  float: left;
+}
+
+nav ul li {
+  height: 40px;
+  text-align: center;
+  float: left;
+  list-style-type: none;
+}
+nav ul li a {
+  display: block;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  color: cornsilk;
+  font-size: 17px;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: antiquewhite;
+  color: rgb(0, 0, 0);
+}
+
+#heading {
+  background-color: gainsboro;
+}
+
+#login #login-button {
+  background-color: #a8c66c;
+  color: ivory;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#login #login-button:hover {
+  background-color: #1b6535;
+  color: ivory;
+}
+
+#login-replace {
+  float: right;
+}
+#login #logout-button {
+  background-color: #f33f3f;
+  color: ivory;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#login #logout-button:hover {
+  background-color: black;
+  color: ivory;
+}
+#comment-form #comment-button {
+  background-color: #a8c66c;
+  color: ivory;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#comment-form #comment-button:hover {
+  background-color: #1b6535;
+  color: ivory;
+}
+
+.content {
+  background-color: aqua;
+}
+hgroup {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  font-family: monospace;
+  color: #1b6535;
+}
+
+#login {
+  margin: 20px;
+  margin-top: 10px;
+  color: #1b6535;
+}
+
+#my-posts {
+  margin-left: 20px;
+}
+.threeposts {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  text-align: center;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #a8c66c;
+  font-family: Arial;
+  padding-top: 0;
+  color: gray;
+}
+
+h2 {
+  color: #1b6535;
+}
+
+.like-button {
+  background-color: #f33f3f;
+  color: ivory;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.like-button:hover {
+  background-color: dimgray;
+  color: #a8c66c;
+}
+
+#delete-button {
+  background-color: black;
+  color: ivory;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#delete-button:hover {
+  background-color: ivory;
+  color: black;
+}
+
+#postform #post-button {
+  background-color: #a8c66c;
+  color: ivory;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#postform #post-button:hover {
+  background-color: #1b6535;
+  color: ivory;
+}
+.flowtow {
+  width: 100%;
+  margin: 0 auto;
+  display: table-cell;
+  border-style: dashed;
+  border-width: 2px;
+  border-left: 0;
+  border-bottom: 0;
+  border-top: 0;
+  border-color: #a8c66c;
+  color: #1b6535;
+}
+.flowtow ul li {
+  width: 90%;
+  list-style-type: none;
+}
+.flowtow ul li img {
+  width: 35%;
+}
+
+.flowtow ul li :hover {
+  background-color: ivory;
+  color: #a8c66c;
+}
+
+.postsdisplay {
+  display: flex;
+  color: dimgray;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid #a8c66c;
+  border-style: dashed;
+  text-align: center;
+  margin-top: 15px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.flex-child ul li {
+  list-style-type: none;
+}
+
+.postsdisplay ul li img {
+  width: 35px;
+}
+
+.recentposts ul li:hover {
+  background-color: ivory;
+  color: black;
+}
+
+.popularposts ul li:hover {
+  background-color: ivory;
+  color: black;
+}
+
+#comment-section {
+  display: flex;
+  align-items: center;
+}
+
+#whatis {
+  padding-top: 10px;
+  width: 100%;
+  background-color: #a8c66c;
+  text-align: center;
+  color: #1b6535;
+  font-family: monospace;
+  font-size: large;
+  font-weight: bolder;
+}
+
+footer {
+  background-color: #a8c66c;
+  clear: both;
+  text-align: center;
+  font-family: monospace;
+}
+
+#social {
+  text-align: center;
+  padding-top: 15px;
+}
+
+#social a {
+  font-size: 30px;
+}
+#social li {
+  display: inline-block;
+  width: 60px;
+}
+
+#social-twitter a {
+  background-image: url(../twitter.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 60px;
+  height: 30px;
+  color: transparent;
+  display: block;
+}
+
+#social-facebook a {
+  background-image: url(../facebook.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 60px;
+  height: 30px;
+  color: transparent;
+  display: block;
+}
+
+#social-instagram a {
+  background-image: url(../insta.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 60px;
+  height: 30px;
+  color: transparent;
+  display: block;
+}
+.footer-tos {
+  padding: 10px 0 0 0;
+  color: #1b6535;
+  text-align: center;
+}
+
+.footer-tos li {
+  display: inline-block;
+}
+
+.footer-tos a {
+  text-decoration: none;
+  color: #1b6535;
+  margin: 5px;
+}
+#copyright {
+  color: #1b6535;
+  text-align: center;
+  line-height: 50px;
+}
