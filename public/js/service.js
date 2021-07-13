@@ -4,7 +4,7 @@
  * < short description: This module implements user authentication and helps getting logged-user and his/her JWT token.>
  *
  * Student Name: Zhixu Ding
- * Student Number: 44463529
+ * Student Number: xxxxxxxx
  *
  */ 
 
