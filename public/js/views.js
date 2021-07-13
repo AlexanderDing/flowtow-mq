@@ -4,7 +4,7 @@
  * < short description: This module implements view functions for the whole application>
  *
  * Student Name: Zhixu Ding
- * Student Number: 44463529
+ * Student Number: xxxxxxxx
  *
  */
 export {samplePostView, popularDisplayView, recentDisplayView, postView, loginView, myPostsView, allPostsView, postFormView, commentsView, commentFormView};
